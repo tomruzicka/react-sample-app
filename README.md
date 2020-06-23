@@ -12,7 +12,7 @@ To be able to run this project on your own computer, you will need [NPM & Node.J
 
 ### Clone and Run
 
-To install and run this project on your computer, please [fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) this repository. Then [clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) the forked repo to your harddrive.
+To install and run this project on your computer, please create a private repository and [duplicate](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/duplicating-a-repository) this repository to it.
 Once you have all the sources on your computer, open command line in the directory where the repository was cloned into (the directory where `.gitignore` and `README.md` files are located). Run
 
 ```
@@ -39,6 +39,6 @@ The [library for communication with eWay-CRM API](https://github.com/eway-crm/js
 
 ## Commit and Push
 
-Once you have your amazing app, commit and [push](https://help.github.com/en/github/using-git/pushing-commits-to-a-remote-repository) the codes to your repo.
+Once you have your amazing app, commit and [push](https://help.github.com/en/github/using-git/pushing-commits-to-a-remote-repository) the codes to your repo. Give [rstefko](https://github.com/orgs/eway-crm/people/rstefko) and [havri](https://github.com/orgs/eway-crm/people/havri) permissions to your repository.
 
 Let us know when the final revision is pushed (commit/tag/branch). We are looking forward to see your results.
