@@ -29,8 +29,16 @@ A new window or tab of you default browser appears and the url is http://localho
 
 We wish you a happy coding.
 
+## Your Goal
+
+The standard goal we want you to accomplish is a app that contains a form where you specify contact's email address. After submitting the form, something like a business card containing the contact's info should appear. The profile picture should be shown as well.
+
+You should also handle the states, where wrong user input is given or no contact is found.
+
+The [library for communication with eWay-CRM API](https://github.com/eway-crm/js-lib) is already included. 
+
 ## Commit and Push
 
-Once you have your amazing app, which is definitelly better then the ours, commit and [push](https://help.github.com/en/github/using-git/pushing-commits-to-a-remote-repository) the codes to your repo.
+Once you have your amazing app, commit and [push](https://help.github.com/en/github/using-git/pushing-commits-to-a-remote-repository) the codes to your repo.
 
 Let us know when the final revision is pushed (commit/tag/branch). We are looking forward to see your results.
