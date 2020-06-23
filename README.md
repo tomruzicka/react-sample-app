@@ -31,7 +31,7 @@ We wish you a happy coding.
 
 ## Your Goal
 
-The standard goal we want you to accomplish is a app that contains a form where you specify contact's email address. After submitting the form, something like a business card containing the contact's info should appear. The profile picture should be shown as well.
+The standard goal we want you to accomplish is an app that contains a form where you specify contact's email address. After submitting the form, something like a business card containing the contact's info should appear. The profile picture should be shown as well.
 
 You should also handle the states, where wrong user input is given or no contact is found.
 
