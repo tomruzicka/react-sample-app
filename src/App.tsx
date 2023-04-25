@@ -10,7 +10,7 @@ const css = mergeStyleSets({
         left: '25vw',
         top: '40vh'
     }
-})
+});
 
 const dialogContentProps = {
     type: DialogType.normal,
@@ -23,7 +23,7 @@ const modalProps = {
 };
 
 // This is a React Hook component.
-function App() {
+const App = () => {
     const [fullName, setFullName] = React.useState<string | null>(null);
 
     React.useEffect(() => {
@@ -68,6 +68,6 @@ function App() {
             }
         </div>
     );
-}
+};
 
 export default App;
