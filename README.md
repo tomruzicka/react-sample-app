@@ -1,4 +1,4 @@
-![eWay-CRM Logo](https://www.eway-crm.com/wp-content/themes/eway/img/email/logo_grey.png)
+![eWay-CRM Logo](https://www.eway-crm.com/wp-content/themes/eway/img/logo_new-new.svg)
 
 # React Sample App (Interview Assignment)
 
