@@ -1,21 +1,23 @@
 {
   "name": "react-sample-app",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "private": true,
   "dependencies": {
-    "@eway-crm/connector": "^1.0.4",
-    "@fluentui/react": "^7.121.2",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "@types/jest": "^24.9.1",
-    "@types/node": "^12.12.47",
-    "@types/react": "^16.9.38",
-    "@types/react-dom": "^16.9.8",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
-    "typescript": "^3.7.5"
+    "@eway-crm/connector": "^1.0.118",
+    "@fluentui/react": "^8.108.2",
+    "@types/jest": "^27.4.1",
+    "@types/node": "^18.15.0",
+    "@types/react": "^18.0.38",
+    "@types/react-dom": "^18.0.11",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.1.1",
+    "typescript": "^4.9.4"
   },
   "scripts": {
     "start": "react-scripts start",

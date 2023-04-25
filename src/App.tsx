@@ -1,10 +1,7 @@
 import React from 'react';
-import { Dialog, DialogType, DialogFooter } from 'office-ui-fabric-react/lib/Dialog';
-import { PrimaryButton } from 'office-ui-fabric-react/lib/Button';
-import { ProgressIndicator } from 'office-ui-fabric-react/lib/ProgressIndicator';
-import { mergeStyleSets } from 'office-ui-fabric-react';
 import connection from './eWayAPI/Connector';
 import { TContactsResopnse } from './eWayAPI/ContactsResponse';
+import { mergeStyleSets, Dialog, DialogType, DialogFooter, PrimaryButton, ProgressIndicator } from '@fluentui/react';
 
 const css = mergeStyleSets({
     loadingDiv: {
@@ -27,7 +24,6 @@ const modalProps = {
 
 // This is a React Hook component.
 function App() {
-
     const [fullName, setFullName] = React.useState<string | null>(null);
 
     React.useEffect(() => {
