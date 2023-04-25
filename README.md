@@ -10,7 +10,7 @@ Hello and welcome to eWay-CRM job interview. We are happy to see you playing aro
 
 To be able to run this project on your own computer, you will need [NPM & Node.JS](https://www.npmjs.com/get-npm).
 
-### Clone and Run
+### Duplicate and Run Non-Publicly
 
 To install and run this project on your computer, please create a private repository and [duplicate](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/duplicating-a-repository) this repository to it.
 Once you have all the sources on your computer, open command line in the directory where the repository was cloned into (the directory where `.gitignore` and `README.md` files are located). Run
@@ -35,7 +35,7 @@ The standard goal we want you to accomplish is an app that contains a form where
 
 You should also handle the states, where wrong user input is given or no contact is found.
 
-The [library for communication with eWay-CRM API](https://github.com/eway-crm/js-lib) is already included. 
+The [library for communication with eWay-CRM API](https://github.com/eway-crm/js-lib) is already included.
 
 ## Commit and Push
 
