@@ -5,5 +5,5 @@ export type TContactsResopnse = IApiResult & {
 };
 
 export type TContact = {
-    FileAs: string | null
+    FileAs: string | null;
 };
