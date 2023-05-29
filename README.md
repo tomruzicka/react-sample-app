@@ -37,6 +37,8 @@ You should also handle the states, where wrong user input is given or no contact
 
 The [library for communication with eWay-CRM API](https://github.com/eway-crm/js-lib) is already included.
 
+Feel free to update or add new dependencies. Using the latest React features is welcome.
+
 ## Commit and Push
 
 Once you have your amazing app, commit and [push](https://help.github.com/en/github/using-git/pushing-commits-to-a-remote-repository) the codes to your repo. Give [rstefko](https://github.com/orgs/eway-crm/people/rstefko) and [havri](https://github.com/orgs/eway-crm/people/havri) permissions to your repository.

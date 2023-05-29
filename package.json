@@ -3,8 +3,8 @@
   "version": "1.0.1",
   "private": true,
   "dependencies": {
-    "@eway-crm/connector": "^1.0.118",
-    "@fluentui/react": "^8.108.2",
+    "@eway-crm/connector": "^1.0.130",
+    "@fluentui/react": "^8.109.7",
     "@types/jest": "^27.4.1",
     "@types/node": "^18.15.0",
     "@types/react": "^18.0.38",
