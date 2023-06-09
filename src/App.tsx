@@ -32,7 +32,7 @@ const App = () => {
                 'SearchContacts',
                 {
                     transmitObject: {
-                        Email1Address: 'mroyster@royster.com'
+                        Email1Address: 'mroyster@royster.com' // ealbares@gmail.com, oliver@hotmail.com, michael.ostrosky@ostrosky.com, kati.rulapaugh@hotmail.com and many others
                     },
                     includeProfilePictures: false
                 },
