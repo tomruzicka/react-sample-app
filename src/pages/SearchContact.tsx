@@ -224,7 +224,3 @@ export const SearchContact = () => {
     </div>
   );
 };
-
-// ealbares@gmail.com "0db3650f-bb87-4acc-96d6-9e6993cc6e61"
-// oliver@hotmail.com "d33d95d7-039e-46b5-a687-258b9a9964ed"
-// michael.ostrosky@ostrosky.com "13c13c37-54d7-42aa-b8e2-f3a70e019416"
