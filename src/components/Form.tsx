@@ -39,7 +39,7 @@ export const Form = ({
   onSubmit: (email: string) => void;
   error: string;
 }) => {
-  const [email, setEmail] = useState("ealbares@gmail.com");
+  const [email, setEmail] = useState("");
 
   const handleOnChange = (newValue: string | undefined) => {
     if (newValue) setEmail(newValue);

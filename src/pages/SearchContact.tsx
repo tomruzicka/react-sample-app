@@ -6,7 +6,7 @@ import {
 } from "@fluentui/react";
 import { useBoolean } from "@fluentui/react-hooks";
 import { useEffect, useState } from "react";
-import { Form, Modal, NoData, Spinner } from "../components";
+import { Form, MessageToast, Modal, NoData, Spinner } from "../components";
 import connection from "../eWayAPI/Connector";
 import { TContact, TContactsResopnse } from "../eWayAPI/ContactsResponse";
 import { LoadingLayout } from "../layouts/LoadingLayout";
@@ -52,11 +52,14 @@ export const SearchContact = () => {
     string | null
   >(null);
 
+  const [messageError, setMessageError] = useState<string | null>(null);
+
   const getFullName = (firstName: string, lastName: string) =>
     firstName + " " + lastName;
 
   const handleOnSubmit = (email: string) => {
     setIsLoadingContact(true);
+    setMessageError(null);
     connection.callMethod(
       "SearchContacts",
       {
@@ -102,12 +105,17 @@ export const SearchContact = () => {
             JSON.stringify(recentlySearchedIdsStorage)
           );
         }
+      },
+      (error: TContactsResopnse) => {
+        setIsLoadingContact(false);
+        setMessageError(error.Description);
       }
     );
   };
 
   const handleOnClickPersona = (email: string) => {
     setIsLoadingContact(true);
+    setMessageError(null);
     connection.callMethod(
       "SearchContacts",
       {
@@ -120,6 +128,10 @@ export const SearchContact = () => {
         setContact(result.Data[0]);
         setIsLoadingContact(false);
         showModal();
+      },
+      (error: TContactsResopnse) => {
+        setIsLoadingContact(false);
+        setMessageError(error.Description);
       }
     );
   };
@@ -167,6 +179,10 @@ export const SearchContact = () => {
 
   return (
     <div>
+      <MessageToast
+        messageError={messageError}
+        setMessageError={() => setMessageError(null)}
+      />
       <SectionLayout header={{ label: "Search contact" }}>
         <Modal data={contact} isModalOpen={isModalOpen} hideModal={hideModal} />
         <Form
@@ -187,6 +203,7 @@ export const SearchContact = () => {
             {
               label: "Refresh",
               onClick: refreshRecentlySearched,
+              disabled: recentlySearchedContacts.length === 0,
             },
           ],
         }}
