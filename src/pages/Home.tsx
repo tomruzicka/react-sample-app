@@ -1,5 +1,5 @@
 import { Link } from "@fluentui/react";
-import { SectionLayout } from "../layouts/SectionLayout";
+import { SectionLayout } from "../layouts";
 
 export const Home = () => {
   return (

@@ -1,8 +1,7 @@
 import { mergeStyleSets } from "@fluentui/react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { MainLayout } from "./layouts/MainLayout";
-import { Home } from "./pages/Home";
-import { SearchContact } from "./pages/SearchContact";
+import { MainLayout } from "./layouts";
+import { Home, SearchContact } from "./pages";
 
 const css = mergeStyleSets({
   layout: {

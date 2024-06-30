@@ -9,8 +9,7 @@ import { useEffect, useState } from "react";
 import { Form, MessageToast, Modal, NoData, Spinner } from "../components";
 import connection from "../eWayAPI/Connector";
 import { TContact, TContactsResopnse } from "../eWayAPI/ContactsResponse";
-import { LoadingLayout } from "../layouts/LoadingLayout";
-import { SectionLayout } from "../layouts/SectionLayout";
+import { LoadingLayout, SectionLayout } from "../layouts";
 
 const list = mergeStyleSets({
   container: {
