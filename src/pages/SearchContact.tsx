@@ -5,8 +5,9 @@ import {
   mergeStyleSets,
 } from "@fluentui/react";
 import { useBoolean } from "@fluentui/react-hooks";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Form, MessageToast, Modal, NoData, Spinner } from "../components";
+import { FormHandle } from "../components/Form";
 import connection from "../eWayAPI/Connector";
 import { TContact, TContactsResopnse } from "../eWayAPI/ContactsResponse";
 import { LoadingLayout, SectionLayout } from "../layouts";
@@ -34,6 +35,7 @@ const list = mergeStyleSets({
 });
 
 export const SearchContact = () => {
+  const formRef = useRef<FormHandle>(null);
   const [isModalOpen, { setTrue: showModal, setFalse: hideModal }] =
     useBoolean(false);
   const [contact, setContact] = useState<TContact | undefined>();
@@ -79,6 +81,7 @@ export const SearchContact = () => {
         setContact(contact);
         setIsLoadingContact(false);
         showModal();
+        if (formRef.current) formRef.current.clearInput();
 
         // Check if IDs in storage exist
         const recentlySearchedIdsStorage = JSON.parse(
@@ -187,6 +190,7 @@ export const SearchContact = () => {
       <SectionLayout header={{ label: "Search contact" }}>
         <Modal data={contact} isModalOpen={isModalOpen} hideModal={hideModal} />
         <Form
+          ref={formRef}
           onSubmit={(email: string) => handleOnSubmit(email)}
           error={error}
         />

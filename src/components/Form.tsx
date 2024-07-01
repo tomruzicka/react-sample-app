@@ -4,7 +4,7 @@ import {
   TextField,
   mergeStyleSets,
 } from "@fluentui/react";
-import { FormEvent, useState } from "react";
+import { FormEvent, forwardRef, useImperativeHandle, useState } from "react";
 
 const form = mergeStyleSets({
   container: {
@@ -32,46 +32,57 @@ const form = mergeStyleSets({
   },
 });
 
-export const Form = ({
-  onSubmit,
-  error,
-}: {
+export interface FormHandle {
+  clearInput: () => void;
+}
+
+interface FormProps {
   onSubmit: (email: string) => void;
   error: string;
-}) => {
-  const [email, setEmail] = useState("");
+}
 
-  const handleOnChange = (newValue: string | undefined) => {
-    if (newValue) setEmail(newValue);
-    else setEmail("");
-  };
+export const Form = forwardRef<FormHandle, FormProps>(
+  ({ onSubmit, error }: FormProps, ref) => {
+    const [email, setEmail] = useState("");
 
-  const handleOnSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    onSubmit(email);
-  };
+    const handleOnChange = (newValue: string | undefined) => {
+      if (newValue) setEmail(newValue);
+      else setEmail("");
+    };
 
-  return (
-    <div>
-      <form onSubmit={handleOnSubmit} className={form.container}>
-        <TextField
-          label="E-mail"
-          type="email"
-          value={email}
-          onChange={(_, newValue) => handleOnChange(newValue)}
-          errorMessage={error}
-          className={form.input}
-        />
-        <IconButton
-          iconProps={{ iconName: "Search" }}
-          className={form.button}
-          type="submit"
-        />
-      </form>
-      <MessageBar>
-        Please enter the email address you want to search for. After the search,
-        a window with contact information will appear.
-      </MessageBar>
-    </div>
-  );
-};
+    useImperativeHandle(ref, () => ({
+      clearInput: () => {
+        setEmail("");
+      },
+    }));
+
+    const handleOnSubmit = (e: FormEvent) => {
+      e.preventDefault();
+      onSubmit(email);
+    };
+
+    return (
+      <div>
+        <form onSubmit={handleOnSubmit} className={form.container}>
+          <TextField
+            label="E-mail"
+            type="email"
+            value={email}
+            onChange={(_, newValue) => handleOnChange(newValue)}
+            errorMessage={error}
+            className={form.input}
+          />
+          <IconButton
+            iconProps={{ iconName: "Search" }}
+            className={form.button}
+            type="submit"
+          />
+        </form>
+        <MessageBar>
+          Please enter the email address you want to search for. After the
+          search, a window with contact information will appear.
+        </MessageBar>
+      </div>
+    );
+  }
+);
