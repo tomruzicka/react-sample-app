@@ -57,6 +57,7 @@ export const SearchContact = () => {
     firstName + " " + lastName;
 
   const handleOnSubmit = (email: string) => {
+    if (email === "") return setError("E-mail is required!");
     setIsLoadingContact(true);
     setMessageError(null);
     connection.callMethod(
