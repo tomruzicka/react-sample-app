@@ -154,6 +154,7 @@ export const SearchContact = () => {
         itemGuids: recentlySearchedIds,
         includeForeignKeys: true,
         includeRelations: false,
+        includeProfilePictures: true,
       },
       (result: TContactsResopnse) => {
         setRecentlySearchedContacts(result.Data);
@@ -226,6 +227,7 @@ export const SearchContact = () => {
                       text={getFullName(person.FirstName, person.LastName)}
                       secondaryText={person.Email1Address}
                       size={PersonaSize.size56}
+                      imageUrl={`data:image/png;base64,${person.ProfilePicture}`}
                     />
                   </div>
                 ))}
