@@ -203,12 +203,16 @@ export const SearchContact = () => {
             {
               label: "Clear",
               onClick: clearRecentlySearched,
-              disabled: recentlySearchedContacts.length === 0,
+              disabled:
+                recentlySearchedContacts.length === 0 ||
+                isLoadingRecentlyContacts,
             },
             {
               label: "Refresh",
               onClick: refreshRecentlySearched,
-              disabled: recentlySearchedContacts.length === 0,
+              disabled:
+                recentlySearchedContacts.length === 0 ||
+                isLoadingRecentlyContacts,
             },
           ],
         }}
