@@ -30,6 +30,12 @@ const list = mergeStyleSets({
       ":hover": {
         backgroundColor: NeutralColors.gray20,
       },
+      "@media (max-width: 380px)": {
+        flexDirection: "column",
+        ".ms-Persona-primaryText, .ms-Persona-secondaryText": {
+          textAlign: "center",
+        },
+      },
     },
   },
 });
